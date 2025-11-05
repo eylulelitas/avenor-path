@@ -94,3 +94,66 @@
           <div class="p-4">
             <h3 class="font-semibold text-indigo-700">Retreats & Workshops</h3>
             <p class="text-sm text-gray-600 mt-1">Transformative circles to remember your light.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Connect -->
+  <section id="connect" class="scroll-mt-24">
+    <div class="max-w-6xl mx-auto px-4 py-16 md:py-24 grid md:grid-cols-2 gap-10 items-start">
+      <div>
+        <h2 class="text-3xl md:text-4xl font-medium text-indigo-700 mb-4">Connect</h2>
+        <p class="text-gray-700 md:text-lg mb-6">We’d love to hear from you...</p>
+        <ul class="text-sm text-gray-600 space-y-1">
+          <li>Instagram: <span class="text-indigo-700">@avenorpath</span></li>
+          <li>Email: <span class="text-indigo-700">hello@avenorpath.com</span></li>
+        </ul>
+      </div>
+
+      <form action="https://formspree.io/f/xxxxxx" method="POST" class="space-y-4 bg-gray-50 border rounded-xl p-6">
+        <input type="text" name="name" placeholder="Name" class="w-full border p-3 rounded" required>
+        <input type="email" name="email" placeholder="Email" class="w-full border p-3 rounded" required>
+        <textarea name="message" rows="5" placeholder="Message" class="w-full border p-3 rounded"></textarea>
+        <button class="w-full bg-indigo-600 text-white py-3 rounded-lg hover:bg-indigo-700 transition">Send</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="scroll-mt-24">
+    <div class="max-w-6xl mx-auto px-4 py-16 md:py-24 grid md:grid-cols-2 gap-10 items-center">
+      <img src="lulolotsch2709_photorealistic_panoramic_view_of_Bodrum_Castle_o_1e1dc41b-ba06-4c0f-896b-db3c0c136317.jpg" alt="Bodrum Castle" class="w-full aspect-square object-cover rounded-2xl shadow-lg">
+      <div>
+        <h2 class="text-3xl md:text-4xl font-medium text-indigo-700 mb-4">About Avenor Path</h2>
+        <div class="space-y-4 text-gray-700 leading-relaxed">
+          <p>At Avenor Path, we believe that every individual carries a unique light within...</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t">
+    <div class="max-w-6xl mx-auto px-4 py-8 text-sm text-gray-500 flex flex-col md:flex-row items-center justify-between gap-2">
+      <p>© <span id="year"></span> Avenor Path. All rights reserved.</p>
+      <div class="flex gap-4">
+        <a href="#what-we-do" class="hover:text-indigo-600">What We Do</a>
+        <a href="#connect" class="hover:text-indigo-600">Connect</a>
+        <a href="#about" class="hover:text-indigo-600">About</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const btn = document.getElementById('menuBtn');
+    const menu = document.getElementById('mobileMenu');
+    btn?.addEventListener('click', () => {
+      const hidden = menu.classList.toggle('hidden');
+      btn.setAttribute('aria-expanded', String(!hidden));
+    });
+  </script>
+</body>
+</html>
